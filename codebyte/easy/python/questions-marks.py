@@ -21,12 +21,15 @@ Output: false
 Input: "acc?7??sss?3rr1??????5"
 Output: true
 """
+
+
 def isDigit(d):
     try:
         int(d)
         return True
     except ValueError:
         return False
+
 
 def QuestionsMarks(strParam):
     question_marks = 0
@@ -41,10 +44,11 @@ def QuestionsMarks(strParam):
                     return "false"
                 question_marks = 0  # Reset for next pair
             current_int = int(strParam[i])
-        elif strParam[i] == '?' and current_int is not None:
+        elif strParam[i] == "?" and current_int is not None:
             question_marks += 1
 
     return "true" if exists else "false"
 
-# keep this function call here 
+
+# keep this function call here
 print(QuestionsMarks(input()))

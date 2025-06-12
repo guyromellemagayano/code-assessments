@@ -23,11 +23,14 @@ Output: false
 Input: "u__hello_world123"
 Output: true
 """
-def CodelandUsernameValidation(strParam):
-  pattern = re.compile(r"^[a-zA-Z][\w_]{2,23}[^_]$")
-  res = pattern.match(strParam)
-  strParam = "true" if res else "false"
-  return strParam
 
-# keep this function call here 
+
+def CodelandUsernameValidation(strParam):
+    pattern = re.compile(r"^[a-zA-Z][\w_]{2,23}[^_]$")
+    res = pattern.match(strParam)
+    strParam = "true" if res else "false"
+    return strParam
+
+
+# keep this function call here
 print(CodelandUsernameValidation(input()))
